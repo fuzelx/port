@@ -115,7 +115,11 @@
 }
 .card{
   width: 260px;
-  height: 290px;
+  height: 364px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
   margin: 25px;
   background-color: black;
   border:rgb(170, 170, 170)2px solid;
@@ -127,8 +131,21 @@
   transition: 0.3s ease;
   
 }
+.card-btn a{
+  padding: 12px;
+  border-radius: 7px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 165, 0) ;
+  border: rgb(0, 165, 0) 2px solid;
+}
+.card-btn a:hover{
+  
+  background-color:rgb(0, 165, 0) ;
+  color: white;
+}
 .img-c{
-  width: 256px;
+  width: 220px;
   height: 130px;
   border-radius: 10px 10px 0px 0px;
 }
@@ -145,12 +162,13 @@
 
 }
 .info-card h3{
-  font-size: 25px;
+  font-size: 22px;
   color: rgb(170, 170, 170);
   font-weight: 500;
 }
 .info-card p{
-  font-size: 20px;
+  font-size: 18px;
+  margin-left: 15px;
   color: rgb(170, 170, 170);
   font-weight: lighter;
   font-style: italic;
@@ -183,10 +201,11 @@
       }
       .name{
         align-items: flex-start;
+        margin: 38px;
       }
       .main-name{
         text-align: left;
-        font-size: 40px;
+        font-size: 62px;
         font-weight: 500;
         color: white;
       }
@@ -220,7 +239,7 @@
     }
 
     .project-container{
-      height: 1420px;
+      height: 1640px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -238,7 +257,11 @@
     }
     .card{
       width: 260px;
-      height: 290px;
+      height: 364px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
       margin: 25px;
       background-color: black;
       border:rgb(170, 170, 170)2px solid;
@@ -246,8 +269,9 @@
       
     }
    
+  
     .img-c{
-      width: 256px;
+      width: 220px;
       height: 130px;
       border-radius: 10px 10px 0px 0px;
     }
