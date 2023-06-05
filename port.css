@@ -1,0 +1,258 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* typing effetct */
+.container {
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container p {
+    font-size: 38px;
+    padding: 0.5rem;
+    font-weight:300;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  }
+  .container p span.typed-text {
+    font-weight: normal;
+    color: #dd7732;
+  }
+  .container p span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+  .container p span.cursor.typing {
+    animation: none;
+  }
+  @keyframes blink {
+    0%  { background-color: #ccc; }
+    49% { background-color: #ccc; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #ccc; }
+  }
+
+  /* ttypimg end */
+
+  /* home */
+  .home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 530px;
+    margin-top: 80px;
+    padding: 8px;
+  }
+  .home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .name{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hey{
+    font-size: 38px;
+    font-weight: 300;
+    color: white;
+  }
+  .main-name{
+    font-size: 70px;
+    font-weight: 500;
+    color: white;
+  }
+.hm-png{
+    width: 200px;
+    height: 200px;
+}
+.scroll{
+    font-size: 18px;
+    text-align: center;
+    font-weight: lighter;
+    font-style: italic;
+    
+    color: red;
+}
+.projects{
+  
+  background-color: black;
+}
+.project-container{
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
+}
+.h-pr{
+  font-size: 35px;
+  font-weight: 500;
+  margin-top: 50px;
+  color: white;
+  text-align: center;
+}
+.project-con{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card{
+  width: 260px;
+  height: 290px;
+  margin: 25px;
+  background-color: black;
+  border:rgb(170, 170, 170)2px solid;
+  border-radius: 10px;
+  
+}
+.card:hover{
+  transform: scale(1.1);
+  transition: 0.3s ease;
+  
+}
+.img-c{
+  width: 256px;
+  height: 130px;
+  border-radius: 10px 10px 0px 0px;
+}
+.info-card{
+  padding: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.info-card h3,p{
+  text-align: left;
+  margin-top: 8px;
+
+}
+.info-card h3{
+  font-size: 25px;
+  color: rgb(170, 170, 170);
+  font-weight: 500;
+}
+.info-card p{
+  font-size: 20px;
+  color: rgb(170, 170, 170);
+  font-weight: lighter;
+  font-style: italic;
+}
+.footer{
+
+  background-color: rgb(34, 34, 34);
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+
+}
+.last{
+  color: rgb(75, 75, 75);
+  text-align: center;
+  font-size: small;
+  font-weight: 200;
+}
+
+  @media (max-width: 768px) {
+    .home{
+      height: 710px;
+    }
+    .hey{
+        font-size: 22px;
+        font-weight: 300;
+        text-align: left;
+        color: white;
+      }
+      .name{
+        align-items: flex-start;
+      }
+      .main-name{
+        text-align: left;
+        font-size: 40px;
+        font-weight: 500;
+        color: white;
+      }
+      .container p {
+        font-size: 22px;
+        padding: 0.5rem;
+        font-weight:300;
+        letter-spacing: 0.1rem;
+        color: white;
+        text-align: left;
+        overflow: hidden;
+      }
+      .container p span.typed-text {
+        font-weight: normal;
+        color: #dd7732;
+      }
+      .logo{
+        font-size: 25px;
+      }
+      .hm-png{
+        width: 110px;
+        height: 110px;
+    }
+    .scroll{
+        font-size: 18px;
+        text-align: center;
+        font-weight: lighter;
+        font-style: italic;
+        color: red;
+        margin: 50px;
+    }
+
+    .project-container{
+      height: 1420px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column
+    }
+    .project-con{
+      flex-direction: column;
+    }
+    .h-pr{
+      font-size: 25px;
+      font-weight: 500;
+      margin-top: 50px;
+      color: white;
+      text-align: center;
+    }
+    .card{
+      width: 260px;
+      height: 290px;
+      margin: 25px;
+      background-color: black;
+      border:rgb(170, 170, 170)2px solid;
+      border-radius: 10px;
+      
+    }
+   
+    .img-c{
+      width: 256px;
+      height: 130px;
+      border-radius: 10px 10px 0px 0px;
+    }
+    .footer{
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }

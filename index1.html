@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400;1,700&family=Delicious+Handrawn&family=Knewave&family=Marcellus+SC&family=Moo+Lah+Lah&family=Outfit:wght@400;500&family=Pacifico&family=Roboto:wght@400;500&family=Rock+Salt&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="port.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: black;
+    }
+    .a-nav {
+      text-decoration: none;
+    }
+
+    .n-links {
+      list-style: none;
+    }
+    /* NAVBAR STYLING STARTS */
+    .navbar {
+      top: 0;
+      position: fixed;
+      width: 100%;
+      display: flex;
+      font-family: "Outfit", sans-serif;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: rgb(29, 29, 29);
+      color: #fff;
+    }
+
+    .nav-links a {
+      color: #fff;
+    }
+
+    /* LOGO */
+    .logo {
+      font-size: 32px;
+    }
+
+    /* NAVBAR MENU */
+    .menu {
+      display: flex;
+      gap: 1em;
+      font-size: 18px;
+    }
+
+    .menu li:hover {
+      background-color: #666666;
+      border-radius: 5px;
+      color: black;
+      transition: 0.3s ease;
+    }
+
+    .menu li {
+      padding: 5px 14px;
+    }
+
+    /* DROPDOWN MENU */
+    .services {
+      position: relative;
+    }
+
+    .dropdown {
+      background-color: rgb(29, 29, 29);
+      padding: 1em 0;
+      position: absolute; /*WITH RESPECT TO PARENT*/
+      display: none;
+      border-radius: 8px;
+      top: 35px;
+    }
+
+    .dropdown li + li {
+      margin-top: 10px;
+    }
+
+    .dropdown li {
+      padding: 0.5em 1em;
+      width: 8em;
+      text-align: center;
+    }
+
+    .dropdown li:hover {
+      background-color: #707070;
+    }
+
+    .services:hover .dropdown {
+      display: block;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    /* HAMBURGER MENU */
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      user-select: none;
+    }
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        position: absolute;
+        background-color: rgb(29, 29, 29);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+      }
+
+      .menu li:hover {
+        display: inline-block;
+        background-color: #5f5f5f;
+        transition: 0.3s ease;
+      }
+
+      .menu li + li {
+        margin-top: 12px;
+      }
+
+      input[type="checkbox"]:checked ~ .menu {
+        display: block;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+      }
+
+      .dropdown li:hover {
+        background-color: #4c9e9e;
+      }
+    }
+  </style>
+  <body>
+    <nav class="navbar">
+      <!-- LOGO -->
+      <div class="logo">Fuzail Mansuri</div>
+
+      <!-- NAVIGATION MENU -->
+      <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+          <li class="n-links"><a class="a-nav" href="#home">Home</a></li>
+          <li class="n-links"><a class="a-nav" href="#projects">Projects</a></li>
+
+          <li class="n-links"><a class="a-nav" href="/">Pricing</a></li>
+          <li class="n-links"><a class="a-nav" href="/">Contact</a></li>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- section1 -->
+    <div id="home" class="home">
+      <div class="home-container">
+        <div class="h-png">
+          <img class="hm-png" src="/icons8-newtonsoft-250.png" alt="">
+        </div>
+        <div class="name">
+          <h3 class="hey">Hey! i am,</h3>
+          <h1 class="main-name">Fuzail Mansuri</h1>
+          <div class="container">
+            <p> i am a <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+          </div>
+          <p class="scroll">Scroll down</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- section2 -->
+<div id="projects" class="projects">
+  <div class="h-pr"><h1>Projects</h1></div>
+   
+  <div class="project-container">
+    <div class="project-con">
+      <div class="card">
+        <div class="img-card">
+           <img class="img-c" src="/gaming-car2.jpg" alt="">
+        </div>
+        <div class="info-card">
+          <h3>Friendship Calculator</h3>
+          <p>A friendship calculator for fun!</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img-card">
+           <img class="img-c" src="/gaming-car2.jpg" alt="">
+        </div>
+        <div class="info-card">
+          <h3>Friendship Calculator</h3>
+          <p>A friendship calculator for fun!</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img-card">
+           <img class="img-c" src="/gaming-car2.jpg" alt="">
+        </div>
+        <div class="info-card">
+          <h3>Friendship Calculator</h3>
+          <p>A friendship calculator for fun!</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img-card">
+           <img class="img-c" src="/gaming-car2.jpg" alt="">
+        </div>
+        <div class="info-card">
+          <h3>Friendship Calculator</h3>
+          <p>A friendship calculator for fun!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="socials">
+  <a href="#"><img src="/icons8-github.svg" alt=""></a>
+  <a href="#"><img src="/icons8-instagram.svg" alt=""></a>
+  <a href="#"><img src="/icons8-linkedin.svg" alt=""></a>
+  <a href="#"><img src="/icons8-twitter.svg" alt=""></a>
+</div>
+<div class="last">
+  2023 fuzail mansuri 
+</div>
+</div>
+
+    <script src="textanim.js"></script>
+  </body>
+</html>
