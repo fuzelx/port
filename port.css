@@ -276,6 +276,7 @@
       border-radius: 10px 10px 0px 0px;
     }
     .footer{
+        height: 100px;
       flex-direction: column;
       margin-bottom: 0;
     }
