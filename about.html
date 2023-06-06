@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400;1,700&family=Delicious+Handrawn&family=Knewave&family=Marcellus+SC&family=Moo+Lah+Lah&family=Outfit:wght@400;500&family=Pacifico&family=Roboto:wght@400;500&family=Rock+Salt&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="port.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(241, 241, 241);
+    }
+    .container-abt{
+    margin: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .abt{
+      margin: 20px;
+      width: 500px;
+    }
+    .abt h1{
+      color: black;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 45px;
+      font-family: 'Outfit', sans-serif;
+    }
+    .abt p{
+      line-height: 1.6;
+      text-align: justify;
+      color: rgb(143, 143, 143);
+      font-size: 22px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+
+
+    .a-nav {
+      text-decoration: none;
+    }
+
+    .n-links {
+      list-style: none;
+    }
+    /* NAVBAR STYLING STARTS */
+    .navbar {
+      top: 0;
+      position: fixed;
+      width: 100%;
+      display: flex;
+      height: 80px;
+      font-family: "Outfit", sans-serif;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: rgb(20, 20, 20);
+      color: #fff;
+    }
+
+    .nav-links a {
+      color: #fff;
+    }
+
+    /* LOGO */
+    .logo {
+      font-size: 32px;
+      font-family: 'Rock Salt', cursive;
+    }
+
+    /* NAVBAR MENU */
+    .menu {
+      display: flex;
+      gap: 1em;
+      font-size: 18px;
+    }
+
+    .menu li:hover {
+      background-color: #666666;
+      border-radius: 5px;
+      color: black;
+      transition: 0.3s ease;
+    }
+
+    .menu li {
+      padding: 5px 14px;
+    }
+
+    /* DROPDOWN MENU */
+    .services {
+      position: relative;
+    }
+
+    .dropdown {
+      background-color: rgb(29, 29, 29);
+      padding: 1em 0;
+      position: absolute; /*WITH RESPECT TO PARENT*/
+      display: none;
+      border-radius: 8px;
+      top: 35px;
+    }
+
+    .dropdown li + li {
+      margin-top: 10px;
+    }
+
+    .dropdown li {
+      padding: 0.5em 1em;
+      width: 8em;
+      text-align: center;
+    }
+
+    .dropdown li:hover {
+      background-color: #707070;
+    }
+
+    .services:hover .dropdown {
+      display: block;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    /* HAMBURGER MENU */
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      user-select: none;
+    }
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        position: absolute;
+        background-color: rgb(29, 29, 29);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+      }
+
+      .menu li:hover {
+        display: inline-block;
+        background-color: #5f5f5f;
+        transition: 0.3s ease;
+      }
+
+      .menu li + li {
+        margin-top: 12px;
+      }
+
+      input[type="checkbox"]:checked ~ .menu {
+        display: block;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+      }
+
+      .dropdown li:hover {
+        background-color: #4c9e9e;
+      }
+       
+      .abt{
+      margin: 10px;
+      width: 500px;
+    }
+    .container-abt{
+      margin-top: 100px;
+     
+    }
+    .abt h1{
+      color: black;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 36px;
+      font-family: 'Outfit', sans-serif;
+    }
+    .abt p{
+      line-height: 1.2;
+      text-align: justify;
+      color: rgb(100, 100, 100);
+      font-size: 17px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+
+
+    }
+  </style>
+  <body>
+    <nav class="navbar">
+      <!-- LOGO -->
+      <div class="logo">fm</div>
+
+      <!-- NAVIGATION MENU -->
+      <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+          <li class="n-links"><a class="a-nav" href="#home">Home</a></li>
+          <li class="n-links"><a class="a-nav" href="#projects">Projects</a></li>
+
+          <li class="n-links"><a class="a-nav" href="/">About</a></li>
+          <li class="n-links"><a class="a-nav" href="/">Contact</a></li>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- section1 -->
+    <div class="container-abt">
+      <div class="abt">
+          <h1>Hey, i am Fuzail!👋🏻</h1>
+          <p>
+              Hi there! I'm Fuzail Mansuri, a web developer currently pursuing a degree in Computer Applications from Silver Oak University. I have a strong command over HTML5, CSS3, JavaScript, and jQuery. These technologies allow me to create visually stunning and engaging websites. Recently, I've also delved into React.js, which has given me the ability to build dynamic user interfaces. I take pride in my attention to detail and my ability to transform client requirements into practical solutions. With my keen eye for design and problem-solving skills, I strive to deliver exceptional user experiences through my web development expertise. Let's create something amazing together!
+          </p>
+      </div>
+    </div>
+
+<div class="footer">
+  <div class="socials">
+  <a href="#"><img src="/icons8-github.svg" alt=""></a>
+  <a href="#"><img src="/icons8-instagram.svg" alt=""></a>
+  <a href="#"><img src="/icons8-linkedin.svg" alt=""></a>
+  <a href="#"><img src="/icons8-twitter.svg" alt=""></a>
+</div>
+<div class="last">
+  2023 fuzail mansuri 
+</div>
+</div>
+
+    <script src="textanim.js"></script>
+  </body>
+</html>
