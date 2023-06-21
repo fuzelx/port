@@ -228,6 +228,18 @@
   padding: 20px;
   border: white 2px solid;
 }
+.submit{
+  background-color: #ff6600;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  border: none;
+  color: white;
+}
+.submit:hover{
+  background-color: #ff7e27;
+  transition: 0.3s ease;
+}
 .random-quotes{
   padding: 10px;
   height: 350px;
