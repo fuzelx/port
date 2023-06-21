@@ -126,11 +126,11 @@
   border-radius: 10px;
   
 }
-.card:hover{
-  transform: scale(1.1);
-  transition: 0.3s ease;
+/* .card:hover{
+ background-color: white;
+ color: black;
   
-}
+} */
 .card-btn a{
   padding: 12px;
   border-radius: 7px;
@@ -140,7 +140,7 @@
   border: rgb(0, 165, 0) 2px solid;
 }
 .card-btn a:hover{
-  
+  transition: 0.3s ease;
   background-color:rgb(0, 165, 0) ;
   color: white;
 }
@@ -177,16 +177,134 @@
 
   background-color: rgb(34, 34, 34);
   display: flex;
-  height: 80px;
+  height: 120px;
   justify-content: center;
   align-items: center;
 
 }
 .last{
-  color: rgb(75, 75, 75);
+  color: rgb(173, 173, 173);
   text-align: center;
   font-size: small;
   font-weight: 200;
+}
+
+#contact{
+ padding: 8px;
+ height: 430px;
+}
+.m-contact{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-txt{
+  color: white;
+  font-size: 35px;
+  font-weight: 450;
+  margin: 1.5rem;
+}
+.email{
+  margin: 20px;
+}
+.mail{
+  background-color: #252525;
+  width: 400px;
+  color: white;
+  padding: 20px;
+  border: white 2px solid;
+}
+.ask{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 7px;
+}
+.ask-me{
+  background-color: #252525;
+  width: 400px;
+  color: white;
+  padding: 20px;
+  border: white 2px solid;
+}
+.random-quotes{
+  padding: 10px;
+  height: 350px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+#quotes{
+  font-style: italic;
+  font-size: 18px;
+  margin: 15px;
+  text-align: center;
+  color: white;
+}
+#random{
+  background-color: #ff6600;
+  padding: 12px;
+  text-align: center;
+  border: none;
+  color: white;
+}
+#random:hover{
+    background-color: #db5800;
+}
+
+@media (max-width: 500px) {
+  #contact{
+    padding: 8px;
+    height: 430px;
+   }
+   .m-contact{
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+   }
+   .contact-txt{
+     color: white;
+     font-size: 35px;
+     font-weight: 450;
+     margin: 1.5rem;
+   }
+   .email{
+     margin: 20px;
+   }
+   .mail{
+     background-color: #252525;
+     width: 300px;
+     color: white;
+     border-radius: 5px;
+     padding: 14px;
+     border: white 2px solid;
+   }
+   .ask{
+     margin: 7px;
+   }
+   .ask-me{
+     background-color: #252525;
+     width: 300px;
+     color: white;
+     border-radius: 5px;
+     /* margin: 5px; */
+     padding: 14px;
+     border: white 2px solid;
+   }
+   .mail:focus{
+    outline: none;
+    border: #dd7732 2px solid;
+   }
+   .ask-me:focus{
+    outline: none;
+    border: #dd7732 2px solid;
+   }
+   .navbar{
+    height: 60px;
+   }
 }
 
   @media (max-width: 768px) {
@@ -276,7 +394,6 @@
       border-radius: 10px 10px 0px 0px;
     }
     .footer{
-        height: 100px;
       flex-direction: column;
       margin-bottom: 0;
     }
