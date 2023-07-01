@@ -29,6 +29,34 @@
     <title>Fuzail Mansuri</title>
   </head>
   <style>
+
+    
+        /* CSS for the play/pause button */
+        .play-icon::before {
+            content: "\25B6"; /* Unicode for play symbol */
+           
+
+            
+        }
+
+        .pause-icon::before {
+            content: "\275A\275A"; /* Unicode for pause symbol */
+        }
+        .btn{
+          position: fixed;
+          left: 8px;
+          bottom: 15px;
+            background-color: whitesmoke;
+            border-radius: 50px;
+           padding: 13px;
+         
+            border: none;
+        }
+
+       
+
+
+
      body {
       background-color: black;
     }
@@ -166,7 +194,7 @@
       }
     }
   </style>
-  <body>
+ <body>
     <nav class="navbar">
       <!-- LOGO -->
       <div class="logo">fm</div>
@@ -204,14 +232,17 @@
           </div>
           <p class="scroll">Scroll down</p>
         </div>
-       <audio src="song.mp3" autoplay loop></audio>
+       
+
       </div>
     </div>
 
     <!-- section2 -->
 <div id="projects" class="projects">
+ 
   <div class="h-pr"><h1>Projects</h1></div>
-   
+  <p style="color: white;"> Projects are not available!</p> 
+
   <div class="project-container">
     <div class="project-con">
       <div class="card">
@@ -272,17 +303,15 @@
 <div id="contact">
   <div class="m-contact">
     <div class="contact-txt">Contact me!</div>
-    <form id="form1" action="mailto:fuzelxr@gmail.com" method="post" enctype="text/plain">
+    <form id="form1" action="fuzelxr@gmail.com">
   <div class="email">
     <input type="email" class="mail" placeholder="Enter your email">
   </div>
   <div class="ask">
  <textarea name="ask" placeholder="Ask a something!" id="ask-q" cols="22" rows="6" class="ask-me"></textarea>
   </div>
-       <input class="submit" type="submit" form="form1" value="send">
     </form>
-    
- 
+    <button class="submit" type="submit" form="form1" value="Submit">Submit</button>
   </div>
 </div>
 
@@ -291,13 +320,28 @@
   <button id="random" onclick="changeQuote()">Generate New Quote</button>
 </div>
 
+<!-- <div class="audios">
+  <audio loop id="myAudio">
+    <source src="/song.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+ 
+  <div class="audio-controls">
+    <button id="playButton">Play</button>
+    <button id="pauseButton">Pause</button>
+  </div>
+</div> -->
+
+<button class="btn" id="playButton" onclick="togglePlayPause()"><span id="playIcon" class="play-icon"></span></button>
+
 <div class="footer">
   <div class="socials">
     <a href="https://github.com/fuzelx"><img src="/icons8-github.svg" alt=""></a>
     <a href="https://www.instagram.com/fuzelx/"><img src="/icons8-instagram.svg" alt=""></a>
     <a href="https://www.linkedin.com/in/fuzail-mansuri-199a08264/"><img src="/icons8-linkedin.svg" alt=""></a>
     <a href="https://twitter.com/fuzelx"><img src="/icons8-twitter.svg" alt=""></a>
-</div>
+  </div>
+    
 <div class="last">
  &#169;Copyright Fuzail Mansuri <br>  Mail: fuzelxr@gmail.com
 </div>
@@ -305,5 +349,24 @@
 
     <script src="textanim.js"></script>
     <script src="app.js"></script>
+    <script>
+      var audio = new Audio('/song.mp3'); // Replace with the path to your audio file
+      var isPlaying = false;
+      var playButton = document.getElementById('playButton');
+      var playIcon = document.getElementById('playIcon');
+
+      function togglePlayPause() {
+          if (isPlaying) {
+              audio.pause();
+              playIcon.classList.remove('pause-icon');
+              playIcon.classList.add('play-icon');
+          } else {
+              audio.play();
+              playIcon.classList.remove('play-icon');
+              playIcon.classList.add('pause-icon');
+          }
+          isPlaying = !isPlaying;
+      }
+  </script>
   </body>
 </html>
