@@ -337,7 +337,8 @@
       .main-name{
         text-align: left;
         font-size: 62px;
-        font-weight: 500;
+        font-weight: 700;
+     font-family: 'Poppins', sans-serif;
         color: white;
       }
       .container p {
